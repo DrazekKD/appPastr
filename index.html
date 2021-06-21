@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+	>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+<div class="container p-5" style="max-width: 700px">
+	<div  class="row p-4">
+		<div class="col">
+			<label for="startData"  class="form-label">Data rozpoczęcia</label>
+			<input type="date" id="startData" name="startData" class="form-control" >
+		</div>
+		<div class="col">
+			<label for="startTime" class="form-label">Godzina rozpoczęcia</label>
+			<input type="time" id="startTime" name="startTime" class="form-control">
+		</div>
+	</div>
+	<div  class="row p-4" >
+		<div class="col">
+			<label for="stopData" class="form-label">Data zakończenia</label>
+			<input type="date" id="stopData" name="stopData" class="form-control">
+		</div>
+		<div class="col">
+			<label for="stopTime" class="form-label">Godzina zakończenia</label>
+			<input type="time" id="stopTime" name="stopTime" class="form-control">
+		</div>
+	</div>
+	<div  class="row p-4">
+		<div class="col">
+			<label for="startTemperature" class="form-label">Najniższa możliwa temperatura </label>
+			<input type="number" id="startTemperature" name="startTemperature" class="form-control">
+		</div>
+		<div class="col">
+			<label for="stopTemperature" class="form-label">Najwyższa możliwa temperatura</label>
+			<input type="number" id="stopTemperature" name="stopTemperature" class="form-control">
+		</div>
+	</div>
+	<div class="row">
+		<button type="button mx-auto" id="generate"  class="btn btn-success"style="width: 200px; margin: 0 auto; display: block">Generuj raport</button>
+		<button type="button mx-auto" id="clean"  class="btn btn-danger"style="width: 200px; margin: 0 auto; display: block">Wyczyść</button>
+	</div>
+	<div class="row p-5">
+		<h1 class="text-center">Raport</h1>
+		<div id="dataText" class="col shadow p-3 mb-5 bg-body rounded text-center m-5"></div>
+	</div>
+</div>
+</div>
+
+
+<script src="./index.js"></script>
+</body>
+</html>
