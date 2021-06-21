@@ -15,11 +15,14 @@ function forEachDateInRange(startDate, endDate,startTime,stopTime) {
 	let index = 0
 	for(let currentDate = new Date(startDate); currentDate <= endDate; currentDate.setDate(currentDate.getDate() + 1)) {
 		let dateValue = currentDate.toJSON().slice(0, 10).replaceAll("-",'/')
+		let dataFormat = dateValue.split('/').reverse()
+		dataFormat[2] =dataFormat[2].slice(-2)
+		dataFormat = dataFormat.join('/')
 		if (!index){
 			index++
 			dates.push(
 				{
-					date:dateValue,
+					date:dataFormat,
 					time:getFirstTime(startTime)
 				}
 			)
@@ -27,7 +30,7 @@ function forEachDateInRange(startDate, endDate,startTime,stopTime) {
 			index++
 			dates.push(
 				{
-					date:dateValue,
+					date:dataFormat,
 					time:getAllTime()
 				}
 			)
