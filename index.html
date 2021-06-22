@@ -9,47 +9,54 @@
 	<title>Document</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
-<body>
-<div class="container p-5" style="max-width: 700px">
-	<div  class="row p-4">
-		<div class="col">
-			<label for="startData"  class="form-label">Data rozpoczęcia</label>
-			<input type="date" id="startData" name="startData" class="form-control" >
+<body class="d-flex flex-column h-100" style="height: 100vh!important">
+<main class="flex-shrink-0">
+	<div class="container p-5" style="max-width: 700px">
+		<div  class="row p-4">
+			<div class="col">
+				<label for="startData"  class="form-label">Data rozpoczęcia</label>
+				<input type="date" id="startData" name="startData" class="form-control" >
+			</div>
+			<div class="col">
+				<label for="startTime" class="form-label">Godzina rozpoczęcia</label>
+				<input type="time" id="startTime" name="startTime" class="form-control">
+			</div>
 		</div>
-		<div class="col">
-			<label for="startTime" class="form-label">Godzina rozpoczęcia</label>
-			<input type="time" id="startTime" name="startTime" class="form-control">
+		<div  class="row p-4" >
+			<div class="col">
+				<label for="stopData" class="form-label">Data zakończenia</label>
+				<input type="date" id="stopData" name="stopData" class="form-control">
+			</div>
+			<div class="col">
+				<label for="stopTime" class="form-label">Godzina zakończenia</label>
+				<input type="time" id="stopTime" name="stopTime" class="form-control">
+			</div>
+		</div>
+		<div  class="row p-4">
+			<div class="col">
+				<label for="startTemperature" class="form-label">Najniższa możliwa temperatura ℃</label>
+				<input type="number" id="startTemperature" name="startTemperature" class="form-control">
+			</div>
+			<div class="col">
+				<label for="stopTemperature" class="form-label">Najwyższa możliwa temperatura ℃</label>
+				<input type="number" id="stopTemperature" name="stopTemperature" class="form-control">
+			</div>
+		</div>
+		<div class="row">
+			<button type="button mx-auto" id="generate"  class="btn btn-success"style="width: 200px; margin: 0 auto; display: block">Generuj raport</button>
+			<button type="button mx-auto" id="clean"  class="btn btn-danger"style="width: 200px; margin: 0 auto; display: block">Wyczyść</button>
+		</div>
+		<div class="row p-5">
+			<h1 class="text-center">Raport</h1>
+			<div id="dataText" class="col shadow p-3 mb-5 bg-body rounded text-center m-5"></div>
 		</div>
 	</div>
-	<div  class="row p-4" >
-		<div class="col">
-			<label for="stopData" class="form-label">Data zakończenia</label>
-			<input type="date" id="stopData" name="stopData" class="form-control">
-		</div>
-		<div class="col">
-			<label for="stopTime" class="form-label">Godzina zakończenia</label>
-			<input type="time" id="stopTime" name="stopTime" class="form-control">
-		</div>
+</main>
+<footer class="footer mt-auto py-3 bg-light">
+	<div class="container">
+		<span class="text-muted">By <a rel="stylesheet" href="https://www.facebook.com/kamil.drazkiewicz.5" class="link-info" target="_blank">Drazek</a> </span>
 	</div>
-	<div  class="row p-4">
-		<div class="col">
-			<label for="startTemperature" class="form-label">Najniższa możliwa temperatura ℃</label>
-			<input type="number" id="startTemperature" name="startTemperature" class="form-control">
-		</div>
-		<div class="col">
-			<label for="stopTemperature" class="form-label">Najwyższa możliwa temperatura ℃</label>
-			<input type="number" id="stopTemperature" name="stopTemperature" class="form-control">
-		</div>
-	</div>
-	<div class="row">
-		<button type="button mx-auto" id="generate"  class="btn btn-success"style="width: 200px; margin: 0 auto; display: block">Generuj raport</button>
-		<button type="button mx-auto" id="clean"  class="btn btn-danger"style="width: 200px; margin: 0 auto; display: block">Wyczyść</button>
-	</div>
-	<div class="row p-5">
-		<h1 class="text-center">Raport</h1>
-		<div id="dataText" class="col shadow p-3 mb-5 bg-body rounded text-center m-5"></div>
-	</div>
-</div>
+</footer>
 </div>
 
 
