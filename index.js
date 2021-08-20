@@ -65,7 +65,7 @@ function getFirstTime(startTime){
 	const firstIndex = lengthTime?startValue+":"+startTime.split(':')[1]:"0"+startValue+":"+startTime.split(':')[1]
 	firstDayTimes.push([firstIndex,generateRandomNumber(startTemperature.value,stopTemperature.value)])
 	startValue++
-	for(;startValue<=24;startValue++){
+	for(;startValue<=23;startValue++){
 		let lengthTime = startValue.toString().length === 2
 		let time =lengthTime?startValue+":00":"0"+startValue+":00"
 		firstDayTimes.push([time,generateRandomNumber(startTemperature.value,stopTemperature.value)])
@@ -75,7 +75,7 @@ function getFirstTime(startTime){
 
 function getAllTime(){
 	let firstDayTimes =[]
-	for(let i = 0;i<=24;i++){
+	for(let i = 0;i<=23;i++){
 		let lengthTime = i.toString().length === 2
 		let time =lengthTime?i+":00":"0"+i+":00"
 		firstDayTimes.push([time,generateRandomNumber(startTemperature.value,stopTemperature.value)])
